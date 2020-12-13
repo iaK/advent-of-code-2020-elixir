@@ -119,4 +119,22 @@ defmodule AdventTest do
       ) |> (fn ({number, index}) -> number end).()
     ) |> Enum.sum() == 169521051
   end
+
+  test "Day 10 - Adapter array - part 1" do
+    assert Advent.Day10.AdapterArray.find_jumps(
+      FileReader.get_input("lib/day_10/input.txt")
+    ) |> (fn (%{one: one, three: three}) -> one * three end).() == 1398413738
+  end
+
+  test "Day 10 - Adapter array - part 2" do
+    assert Advent.Day10.AdapterArray.all_possible_combinations_count(
+      FileReader.get_input("lib/day_10/input.txt")
+    ) == 1398413738
+  end
+
+  test "Day 11 - Seating system - part 1" do
+    assert Advent.Day11.SeatingSystem.occupied_seats_at_stable(
+      FileReader.get_input("lib/day_11/input.txt")
+    ) == 1398413738
+  end
 end
