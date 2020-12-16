@@ -135,6 +135,13 @@ defmodule AdventTest do
   test "Day 11 - Seating system - part 1" do
     assert Advent.Day11.SeatingSystem.occupied_seats_at_stable(
       FileReader.get_input("lib/day_11/input.txt")
+    ) == 2489
+  end
+
+  test "Day 11 - Seating system - part 2" do
+    assert Advent.Day11.SeatingSystem.occupied_seats_at_stable(
+      FileReader.get_input("lib/day_11/input.txt"),
+      true
     ) == 1398413738
   end
 end
